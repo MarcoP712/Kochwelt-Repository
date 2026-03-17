@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kochwelt</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script defer src="./script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-icon">👨‍🍳</span>
+        <span class="logo-text">Kochwelt</span>
+      </div>
+
+      <nav class="main-nav">
+        <a href="#">Start</a>
+        <a href="#" class="active">Rezept des Tages</a>
+        <a href="#">Kontakt</a>
+        <a href="#">Impressum</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container recipe-page">
+    <section class="recipe-hero">
+      <h1>Verschleierter Braten</h1>
+
+      <div class="hero-image">
+  <img
+    src="./img/jpg/verschleierter_braten_mockup.jpg"
+    alt="Verschleierter Braten"
+  />
+</div>
+
+      <div class="meta-row">
+        <div class="meta-badge">⏱️ 90 Min.</div>
+        <div class="meta-badge">🧑‍🍳 mittel</div>
+        <div class="meta-badge">📅 17.03.2026</div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <section class="ingredients-section">
+      <div class="portion-row">
+        <label for="portionInput">Zutaten für</label>
+        <input id="portionInput" type="number" min="1" value="4" />
+        <button id="calculateBtn">Portionen</button>
+      </div>
+
+      <div class="ingredients-list">
+        <div class="ingredient-item">
+          <span class="amount" data-base="800" data-unit="g">800 g</span>
+          gemischtes Faschiertes
+        </div>
+        <div class="ingredient-item">
+          <span class="amount" data-base="2" data-unit="">2</span>
+          Zwiebeln
+        </div>
+        <div class="ingredient-item">
+          <span class="amount" data-base="2" data-unit="">2</span>
+          Knoblauchzehen
+        </div>
+        <div class="ingredient-item">
+          <span class="amount" data-base="2" data-unit="">2</span>
+          Eier
+        </div>
+        <div class="ingredient-item">
+          <span class="amount" data-base="80" data-unit="g">80 g</span>
+          Semmelbrösel
+        </div>
+        <div class="ingredient-item">
+          <span class="amount" data-base="2" data-unit="EL">2 EL</span>
+          Senf
+        </div>
+        <div class="ingredient-item">
+          <span class="amount" data-base="150" data-unit="g">150 g</span>
+          Schinken
+        </div>
+        <div class="ingredient-item">
+          <span class="amount" data-base="200" data-unit="g">200 g</span>
+          Käse in Scheiben
+        </div>
+        <div class="ingredient-item">
+          <span class="amount" data-base="1" data-unit="TL">1 TL</span>
+          Salz
+        </div>
+        <div class="ingredient-item">
+          <span class="amount" data-base="0.5" data-unit="TL">0.5 TL</span>
+          Pfeffer
+        </div>
+        <div class="ingredient-item">
+          <span class="amount" data-base="1" data-unit="TL">1 TL</span>
+          Paprikapulver
+        </div>
+        <div class="ingredient-item">
+          <span class="amount" data-base="2" data-unit="EL">2 EL</span>
+          Öl
+        </div>
+      </div>
+    </section>
+
+    <section class="preparation-section">
+      <h2>Zubereitung</h2>
+
+      <div class="meta-row small">
+        <div class="meta-badge">⏱️ ca. 30 Minuten</div>
+        <div class="meta-badge">🔥 Gesamtzeit ca. 90 Minuten</div>
+      </div>
+
+      <p class="preparation-text">
+        Zwiebeln und Knoblauch fein hacken. Das Faschierte mit Eiern,
+        Semmelbröseln, Senf, Zwiebeln, Knoblauch sowie Salz, Pfeffer und
+        Paprikapulver gut vermengen. Die Masse auf ein Stück Backpapier zu
+        einem Rechteck formen. Anschließend mit Schinken und Käsescheiben
+        belegen. Die Fleischmasse vorsichtig einrollen, sodass die Fülle in der
+        Mitte liegt. Den Braten in eine Auflaufform legen, mit etwas Öl
+        bestreichen und im vorgeheizten Backofen bei 180 °C Ober-/Unterhitze
+        etwa 60 Minuten backen. Vor dem Anschneiden kurz ruhen lassen und dann
+        in Scheiben servieren.
+      </p>
+    </section>
+
+    <section class="author-section">
+      <h3>Rezept erstellt von</h3>
+
+      <div class="author-box">
+        <div class="author-avatar">M</div>
+        <div class="author-name">Marco</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"></footer>
+</body>
+</html>
