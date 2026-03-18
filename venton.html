@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Griechischer Bauernsalat</title>
+    <link rel="stylesheet" href="./venton.css" />
+    <script defer src="./venton.js"></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">
+          <img src="./img/png/logo.png" alt="Kochwelt Logo" class="logo-img" />
+        </div>
+
+        <nav class="main-nav">
+          <a href="./index.html">Start</a>
+          <a href="#" class="active">Rezept des Tages</a>
+          <a href="#">Kontakt</a>
+          <a href="#">Impressum</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container recipe-page">
+      <section class="recipe-hero">
+        <h1>Griechischer Bauernsalat</h1>
+
+        <div class="hero-image">
+          <img src="./img/jpg/salad.jpg" alt="Griechischer Bauernsalat" />
+        </div>
+
+        <div class="meta-row">
+          <div class="meta-badge">⏱️ 15 Min.</div>
+          <div class="meta-badge">🧑‍🍳 einfach</div>
+          <div class="meta-badge">📅 18.03.2026</div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <section class="ingredients-section">
+        <div class="portion-row">
+          <label for="portionInput">Zutaten für</label>
+          <input id="portionInput" type="number" min="1" value="4" />
+          <button id="calculateBtn">Portionen</button>
+        </div>
+
+        <div class="ingredients-list">
+          <div class="ingredient-item">
+            <span class="amount" data-base="4" data-unit="">4</span>
+            Tomaten
+          </div>
+          <div class="ingredient-item">
+            <span class="amount" data-base="1" data-unit="">1</span>
+            Gurke
+          </div>
+          <div class="ingredient-item">
+            <span class="amount" data-base="1" data-unit="">1</span>
+            rote Zwiebel
+          </div>
+          <div class="ingredient-item">
+            <span class="amount" data-base="200" data-unit="g">200 g</span>
+            Feta
+          </div>
+          <div class="ingredient-item">
+            <span class="amount" data-base="12" data-unit="">12</span>
+            Oliven
+          </div>
+          <div class="ingredient-item">
+            <span class="amount" data-base="3" data-unit="EL">3 EL</span>
+            Olivenöl
+          </div>
+          <div class="ingredient-item">
+            <span class="amount" data-base="1" data-unit="EL">1 EL</span>
+            Zitronensaft
+          </div>
+          <div class="ingredient-item">
+            <span class="amount" data-base="1" data-unit="TL">1 TL</span>
+            Oregano
+          </div>
+          <div class="ingredient-item">
+            <span class="amount" data-base="1" data-unit="Prise">1 Prise</span>
+            Salz
+          </div>
+          <div class="ingredient-item">
+            <span class="amount" data-base="1" data-unit="Prise">1 Prise</span>
+            Pfeffer
+          </div>
+        </div>
+      </section>
+
+      <section class="preparation-section">
+        <h2>Zubereitung</h2>
+
+        <div class="meta-row small">
+          <div class="meta-badge">⏱️ ca. 15 Minuten</div>
+          <div class="meta-badge">🔥 Gesamtzeit ca. 15 Minuten</div>
+        </div>
+
+        <p class="preparation-text">
+          Die Tomaten waschen und in Stücke schneiden. Die Gurke in Scheiben
+          schneiden und die rote Zwiebel in feine Ringe schneiden. Den Feta
+          würfeln und zusammen mit den Oliven in eine große Schüssel geben.
+          Anschließend Olivenöl, Zitronensaft, Oregano, Salz und Pfeffer
+          hinzufügen und alles gut vermengen. Den Salat kurz ziehen lassen und
+          frisch servieren.
+        </p>
+      </section>
+
+      <section class="author-section">
+        <h3>Rezept erstellt von</h3>
+
+        <div class="author-box">
+          <div class="author-avatar">V</div>
+          <div class="author-name">Veton</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"></footer>
+  </body>
+</html>
