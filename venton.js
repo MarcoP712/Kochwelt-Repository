@@ -11,76 +11,98 @@ function formatNumber(value) {
   return value.toFixed(2).replace(".", ",").replace(/,00$/, "");
 }
 
-function sanitizePortions(value) {
-  let portions = parseInt(value, 10);
+function getValidPortions() {
+  let value = parseInt(portionInput.value, 10);
 
-  if (isNaN(portions) || portions < 1) {
-    portions = 1;
+  if (isNaN(value)) {
+    value = 1;
   }
 
-  if (portions > 40) {
-    portions = 40;
+  if (value < 1) {
+    value = 1;
   }
 
-  return portions;
+  if (value > 40) {
+    value = 40;
+  }
+
+  portionInput.value = value;
+  return value;
 }
 
 function updateIngredients() {
-  const portions = sanitizePortions(portionInput.value);
-  portionInput.value = portions;
+  const portions = getValidPortions();
 
   amountElements.forEach((element) => {
     const baseAmount = parseFloat(element.dataset.base);
     const unit = element.dataset.unit || "";
-    const newAmount = (baseAmount / defaultPortions) * portions;
+    const result = (baseAmount / defaultPortions) * portions;
 
-    element.textContent = `${formatNumber(newAmount)}${unit ? " " + unit : ""}`;
+    element.textContent = `${formatNumber(result)}${unit ? " " + unit : ""}`;
   });
 }
 
-calculateBtn.addEventListener("click", updateIngredients);
+if (portionInput && calculateBtn && amountElements.length > 0) {
+  portionInput.setAttribute("min", "1");
+  portionInput.setAttribute("max", "40");
 
-portionInput.addEventListener("input", () => {
-  if (portionInput.value === "") {
-    return;
-  }
-
-  let value = parseInt(portionInput.value, 10);
-
-  if (isNaN(value)) {
-    portionInput.value = 1;
+  calculateBtn.addEventListener("click", function () {
     updateIngredients();
-    return;
-  }
+  });
 
-  if (value < 1) {
-    portionInput.value = 1;
-  }
+  portionInput.addEventListener("input", function () {
+    let rawValue = portionInput.value;
 
-  if (value > 40) {
-    portionInput.value = 40;
-  }
+    if (rawValue === "") {
+      return;
+    }
+
+    rawValue = rawValue.replace(/[^0-9]/g, "");
+
+    if (rawValue === "") {
+      portionInput.value = "";
+      return;
+    }
+
+    let numberValue = parseInt(rawValue, 10);
+
+    if (numberValue < 1) {
+      numberValue = 1;
+    }
+
+    if (numberValue > 40) {
+      numberValue = 40;
+    }
+
+    portionInput.value = numberValue;
+    updateIngredients();
+  });
+
+  portionInput.addEventListener("blur", function () {
+    if (portionInput.value.trim() === "") {
+      portionInput.value = 1;
+    }
+
+    updateIngredients();
+  });
+
+  portionInput.addEventListener("keydown", function (event) {
+    if (
+      event.key === "-" ||
+      event.key === "+" ||
+      event.key === "e" ||
+      event.key === "E" ||
+      event.key === "," ||
+      event.key === "."
+    ) {
+      event.preventDefault();
+    }
+
+    if (event.key === "Enter") {
+      event.preventDefault();
+      updateIngredients();
+    }
+  });
 
   updateIngredients();
-});
-
-portionInput.addEventListener("blur", () => {
-  if (portionInput.value === "") {
-    portionInput.value = 1;
-  }
-
-  updateIngredients();
-});
-
-portionInput.addEventListener("keydown", (event) => {
-  if (event.key === "-" || event.key === "e" || event.key === "+" || event.key === ",") {
-    event.preventDefault();
-  }
-
-  if (event.key === "Enter") {
-    event.preventDefault();
-    updateIngredients();
-  }
-});
-
-updateIngredients();
+}
