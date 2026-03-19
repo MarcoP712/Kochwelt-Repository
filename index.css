@@ -166,6 +166,62 @@ body {
     margin-block-end: 0;
 }
 
+/* FOOTER */
+.site-footer {
+  width: 100%;
+  background: #403838;
+  margin-top: 40px;
+  padding: 40px 0;
+}
+
+.footer-content {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  font-size: 24px;
+}
+
+.footer-logo {
+  width: 40px;
+  height: auto;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: opacity 100ms ease;
+  min-width: 150px;
+}
+
+.social-btn:hover { opacity: 0.85; }
+.social-btn strong { font-size: 14px; font-weight: 700; }
+.social-btn.facebook { background: #1877f2; }
+.social-btn.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.social-btn.twitter { background: #1da1f2; }
 
 
 
