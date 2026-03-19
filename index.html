@@ -14,14 +14,13 @@
 
             <div class="logo">
                 <img src="./img/png/logo.png" alt="Kochwelt Logo" class="logo-img" />
-
             </div>
-
 
             <nav class="main-nav">
                 <a href="#" class="active">Start</a>
                 <a href="#">Rezept des Tages</a>
-                <a href="#">Kontakt</a>
+                <!-- ✅ HIER FIX -->
+                <a href="./kontakt.html">Kontakt</a>
                 <a href="./impressum.html">Impressum</a>
             </nav>
         </div>
@@ -34,10 +33,12 @@
                 <p>Schmackhafte Croissants können auch zu Hause sehr einfach gebacken werden.<br>Mit ca.30 Minuten
                     Aufwand kannst du ein wundervolles Frühstück zaubern.</p>
 
-                    <button class="main-button"><a href="./croissants.html" target="_blank">Rezept öffnen</a></button>
-                
-                    
-                </div>
+                <!-- optional verbessert -->
+                <button class="main-button">
+                    <a href="./croissants.html">Rezept öffnen</a>
+                </button>
+
+            </div>
             </div>
             <img src="./img/jpg/croissant.jpg" alt="Croissant-bild">
         </section>
@@ -45,27 +46,59 @@
         <section class="second-section">
             <h2>Lust auf was Neues?</h2>
 
-    <div class="recipes">
-        <div class="verschleierter-braten">
-           <a href="./marco.html" target="_blank"><img src="./img/jpg/verschleierter_braten_mockup.jpg" alt="braten"></a>
-           <p>Verschleierter Braten</p>
-        </div>
-          <div class="cordon-bleu">
-           <a href="./sandra.html" target="_blank"><img src="./img/jpg/reinhardthrainer-cordon-4538108_1920.jpg" alt="cordon bleu"></a>
-           <p>Cordon bleu à la Uschi</p>
-        </div>
-        <div class="griechischer-bauernsalat">
-           <a href="./venton.html" target="_blank"><img src="./img/jpg/salad.jpg" alt="salad"></a>
-           <p>Griechischer Bauernsalat</p>
-        </div>
+            <div class="recipes">
+                <div class="verschleierter-braten">
+                    <a href="./marco.html"><img src="./img/jpg/verschleierter_braten_mockup.jpg" alt="braten"></a>
+                    <p>Verschleierter Braten</p>
+                </div>
 
+                <div class="cordon-bleu">
+                    <a href="./sandra.html"><img src="./img/jpg/reinhardthrainer-cordon-4538108_1920.jpg" alt="cordon bleu"></a>
+                    <p>Cordon bleu à la Uschi</p>
+                </div>
 
-            
-           
-    </div>
-             
+                <div class="griechischer-bauernsalat">
+                    <a href="./venton.html"><img src="./img/jpg/salad.jpg" alt="salad"></a>
+                    <p>Griechischer Bauernsalat</p>
+                </div>
+            </div>
         </section>
     </main>
 </body>
+
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a href="./index.html" class="footer-logo">
+      <img src="./img/png/logo.png" alt="Kochwelt Logo" class="footer-logo-img" />
+    </a>
+
+    <div class="social-links">
+      <a href="#" class="social-btn facebook" aria-label="Facebook">
+        <span class="social-icon">f</span>
+        <span class="social-text">
+          <small>FIND US ON</small>
+          <strong>FACEBOOK</strong>
+        </span>
+      </a>
+
+      <a href="#" class="social-btn instagram" aria-label="Instagram">
+        <span class="social-icon">◎</span>
+        <span class="social-text">
+          <small>FOLLOW US ON</small>
+          <strong>INSTAGRAM</strong>
+        </span>
+      </a>
+
+      <a href="#" class="social-btn twitter" aria-label="Twitter">
+        <span class="social-icon">t</span>
+        <span class="social-text">
+          <small>FOLLOW US ON</small>
+          <strong>TWITTER</strong>
+        </span>
+      </a>
+    </div>
+  </div>
+</footer>
 
 </html>
