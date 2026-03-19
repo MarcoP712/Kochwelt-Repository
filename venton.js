@@ -11,13 +11,23 @@ function formatNumber(value) {
   return value.toFixed(2).replace(".", ",").replace(/,00$/, "");
 }
 
-function updateIngredients() {
-  let portions = parseInt(portionInput.value, 10);
+function sanitizePortions(value) {
+  let portions = parseInt(value, 10);
 
   if (isNaN(portions) || portions < 1) {
     portions = 1;
-    portionInput.value = 1;
   }
+
+  if (portions > 40) {
+    portions = 40;
+  }
+
+  return portions;
+}
+
+function updateIngredients() {
+  const portions = sanitizePortions(portionInput.value);
+  portionInput.value = portions;
 
   amountElements.forEach((element) => {
     const baseAmount = parseFloat(element.dataset.base);
@@ -30,8 +40,45 @@ function updateIngredients() {
 
 calculateBtn.addEventListener("click", updateIngredients);
 
+portionInput.addEventListener("input", () => {
+  if (portionInput.value === "") {
+    return;
+  }
+
+  let value = parseInt(portionInput.value, 10);
+
+  if (isNaN(value)) {
+    portionInput.value = 1;
+    updateIngredients();
+    return;
+  }
+
+  if (value < 1) {
+    portionInput.value = 1;
+  }
+
+  if (value > 40) {
+    portionInput.value = 40;
+  }
+
+  updateIngredients();
+});
+
+portionInput.addEventListener("blur", () => {
+  if (portionInput.value === "") {
+    portionInput.value = 1;
+  }
+
+  updateIngredients();
+});
+
 portionInput.addEventListener("keydown", (event) => {
+  if (event.key === "-" || event.key === "e" || event.key === "+" || event.key === ",") {
+    event.preventDefault();
+  }
+
   if (event.key === "Enter") {
+    event.preventDefault();
     updateIngredients();
   }
 });
