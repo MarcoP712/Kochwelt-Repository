@@ -6,10 +6,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-<<<<<<< HEAD
-  min-height: 100%;
-=======
->>>>>>> master
   font-family: Arial, Helvetica, sans-serif;
   color: #222;
   background: #ffffff;
@@ -22,11 +18,6 @@ img {
 
 body {
   min-height: 100vh;
-<<<<<<< HEAD
-  display: flex;
-  flex-direction: column;
-=======
->>>>>>> master
 }
 
 /* HEADER */
@@ -50,10 +41,6 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-<<<<<<< HEAD
-  text-decoration: none;
-=======
->>>>>>> master
 }
 
 .logo-icon {
@@ -104,11 +91,6 @@ body {
 }
 
 .recipe-page {
-<<<<<<< HEAD
-  flex: 1;
-  width: 100%;
-=======
->>>>>>> master
   padding-top: 38px;
   padding-bottom: 60px;
 }
@@ -280,102 +262,6 @@ body {
 /* FOOTER */
 .site-footer {
   width: 100%;
-<<<<<<< HEAD
-  background: #1f1f1f;
-  margin-top: auto;
-  padding: 28px 0;
-}
-
-.footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 32px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-
-.footer-logo {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-.footer-logo-img {
-  height: 46px;
-  width: auto;
-  display: block;
-  filter: brightness(0) invert(1);
-}
-
-.social-links {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.social-btn {
-  min-width: 180px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 0 14px;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: opacity 100ms ease;
-}
-
-.social-btn:hover {
-  opacity: 0.85;
-}
-
-.social-icon {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.22);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 16px;
-  flex-shrink: 0;
-}
-
-.social-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.05;
-}
-
-.social-text small {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.4px;
-}
-
-.social-text strong {
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.facebook {
-  background: linear-gradient(90deg, #2d63c9, #214ea6);
-}
-
-.instagram {
-  background: linear-gradient(90deg, #5a52d6, #bc2f83, #f77b39);
-}
-
-.twitter {
-  background: linear-gradient(90deg, #36afff, #2d8fe1);
-}
-=======
   background: #403838;
   margin-top: 40px;
   padding: 40px 0;
@@ -429,7 +315,6 @@ body {
 .social-btn.facebook { background: #1877f2; }
 .social-btn.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
 .social-btn.twitter { background: #1da1f2; }
->>>>>>> master
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
@@ -443,17 +328,6 @@ body {
     justify-content: center;
     gap: 18px;
   }
-<<<<<<< HEAD
-
-  .footer-inner {
-    justify-content: center;
-  }
-
-  .social-links {
-    justify-content: center;
-  }
-=======
->>>>>>> master
 }
 
 @media (max-width: 700px) {
@@ -501,9 +375,6 @@ body {
   .preparation-text {
     font-size: 14px;
   }
-<<<<<<< HEAD
-
-=======
 }
 
 /* FOOTER MOCKUP STYLE */
@@ -610,7 +481,6 @@ body {
 }
 
 @media (max-width: 520px) {
->>>>>>> master
   .social-links {
     width: 100%;
   }
@@ -619,8 +489,4 @@ body {
     width: 100%;
     max-width: 300px;
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> master
