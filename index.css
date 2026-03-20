@@ -166,6 +166,17 @@ body {
     margin-block-end: 0;
 }
 
+.toaster-section{
+  display: flex;
+  
+}
+
+.toaster-section img{
+  width: 260px;
+  height: 230px;
+  border-radius: 10px;
+}
+
 /* FOOTER */
 .site-footer {
   width: 100%;
