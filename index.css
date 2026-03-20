@@ -168,6 +168,7 @@ body {
 
 .toaster-section{
   display: flex;
+  flex-direction: row;
   
 }
 
