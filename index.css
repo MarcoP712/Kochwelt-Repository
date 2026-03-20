@@ -225,3 +225,40 @@ body {
 
 
 
+/* ✅ Seite auf volle Höhe */
+html, body {
+  height: 100%;
+}
+
+/* ✅ Flex Layout */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ✅ MAIN wächst */
+main {
+  flex: 1;
+}
+
+/* ✅ Footer immer unten */
+.site-footer {
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo links unten */
+.footer-logo {
+  height: 40px;
+}
+
+/* Social rechts */
+.footer-right {
+  display: flex;
+  gap: 16px;
+}
