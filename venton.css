@@ -1,5 +1,96 @@
-.recipe-page {
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  background: #ffffff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* HEADER */
+.site-header {
   width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.header-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 18px 16px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.logo-img {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.logo-text {
+  font-size: 26px;
+  font-weight: 400;
+  color: #1f1f1f;
+  line-height: 1;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #2f2f2f;
+  font-size: 14px;
+  font-weight: 600;
+  padding-bottom: 8px;
+  line-height: 1;
+}
+
+.main-nav a.active {
+  color: #118c2a;
+  border-bottom: 3px solid #118c2a;
+}
+
+/* MAIN */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.recipe-page {
   padding-top: 38px;
   padding-bottom: 60px;
 }
@@ -51,6 +142,7 @@
   margin: 30px 0 24px 0;
 }
 
+/* ZUTATEN */
 .ingredients-section {
   margin-bottom: 48px;
 }
@@ -115,10 +207,7 @@
   margin-right: 6px;
 }
 
-.amount::after {
-  content: " " attr(data-unit);
-}
-
+/* ZUBEREITUNG */
 .preparation-section h2 {
   margin: 0 0 14px 0;
   font-size: 22px;
@@ -138,6 +227,7 @@
   max-width: 900px;
 }
 
+/* AUTOR */
 .author-section h3 {
   margin: 0 0 16px 0;
   font-size: 18px;
@@ -169,6 +259,77 @@
   color: #555;
 }
 
+.site-footer {
+  width: 100%;
+  background: #403838;
+  margin-top: 40px;
+  padding: 40px 0;
+}
+
+.footer-content {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  font-size: 24px;
+}
+
+.footer-logo {
+  width: 40px;
+  height: auto;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: opacity 100ms ease;
+  min-width: 150px;
+}
+
+.social-btn:hover { opacity: 0.85; }
+.social-btn strong { font-size: 14px; font-weight: 700; }
+.social-btn.facebook { background: #1877f2; }
+.social-btn.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.social-btn.twitter { background: #1da1f2; }
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+}
+
 @media (max-width: 700px) {
   .portion-row {
     flex-wrap: wrap;
@@ -198,6 +359,14 @@
     font-size: 25px;
   }
 
+  .main-nav a {
+    font-size: 15px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+  }
+
   .hero-image {
     height: 180px;
   }
@@ -207,3 +376,135 @@
     font-size: 14px;
   }
 }
+
+/* FOOTER MOCKUP STYLE */
+.site-footer {
+  width: 100%;
+  background: #1f1f1f;
+  margin-top: 40px;
+  padding: 28px 0;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.footer-logo-img {
+  height: 46px;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  min-width: 180px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 14px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.social-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.social-text small {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.social-text strong {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.facebook {
+  background: linear-gradient(90deg, #2d63c9, #214ea6);
+}
+
+.instagram {
+  background: linear-gradient(90deg, #5a52d6, #bc2f83, #f77b39);
+}
+
+.twitter {
+  background: linear-gradient(90deg, #36afff, #2d8fe1);
+}
+
+@media (max-width: 700px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .social-btn {
+    width: 100%;
+    justify-content: center;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 520px) {
+  .footer-content {
+    padding: 0 12px;
+  }
+
+  .social-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .social-btn {
+    font-size: 11px;
+  }
+}
+
+
