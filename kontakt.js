@@ -77,14 +77,32 @@ function closeModalAndResetForm() {
   }, 180);
 }
 
-contactForm.addEventListener("submit", function (event) {
+contactForm.addEventListener("submit", async function (event) {
   event.preventDefault();
 
   if (!validateForm()) {
     return;
   }
 
-  openSuccessModal();
+  const formData = new FormData(contactForm);
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      openSuccessModal();
+    } else {
+      alert("Beim Senden ist ein Fehler aufgetreten. Bitte versuche es erneut.");
+    }
+  } catch (error) {
+    alert("Die Nachricht konnte nicht gesendet werden. Bitte versuche es später erneut.");
+  }
 });
 
 closeSuccessModal.addEventListener("click", closeModalAndResetForm);

@@ -1,215 +1,203 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Französische Croissants</title>
-
-    <link rel="stylesheet" href="./croissants.css" />
-    <link rel="stylesheet" href="./sandra.css" />
-
-    <script defer src="./sandra.js"></script>
-    <script defer src="./nav.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Französische Croissants</title>
+  <link rel="stylesheet" href="./croissants.css" />
+  <script defer src="./script.js"></script>
+  <script defer src="./nav.js"></script>
 </head>
 
 <body>
-    <header class="site-header">
-  <div class="container header-inner">
-    <a href="./index.html" class="logo">
-      <img src="./img/png/logo.png" alt="Kochwelt Logo" class="logo-img" />
-    </a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html" class="logo">
+        <img src="./img/png/logo.png" alt="Kochwelt Logo" class="logo-img" />
+      </a>
 
-    <button
-      class="burger-btn"
-      id="burgerBtn"
-      type="button"
-      aria-label="Menü öffnen"
-      aria-controls="mainNav"
-      aria-expanded="false"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+      <button
+        class="burger-btn"
+        id="burgerBtn"
+        type="button"
+        aria-label="Menü öffnen"
+        aria-controls="mainNav"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <nav class="main-nav" id="mainNav">
-      <a href="./index.html">Start</a>
-      <a href="./croissants.html" class="active">Rezept des Tages</a>
-      <a href="./kontakt.html">Kontakt</a>
-      <a href="./impressum.html">Impressum</a>
-    </nav>
-  </div>
-</header>
+      <nav class="main-nav" id="mainNav">
+        <a href="./index.html">Start</a>
+        <a href="./croissants.html" class="active">Rezept des Tages</a>
+        <a href="./kontakt.html">Kontakt</a>
+        <a href="./impressum.html">Impressum</a>
+      </nav>
+    </div>
+  </header>
 
-    <main class="container recipe-page">
-        <section class="recipe-hero">
-            <h1>Französische Croissants</h1>
+  <main class="container recipe-page">
+    <section class="recipe-hero">
+      <h1>Französische Croissants</h1>
 
-            <div class="hero-image">
-                <img src="./img/jpg/croissant.jpg" alt="croissant" />
-            </div>
+      <div class="hero-image">
+        <img src="./img/jpg/croissant.jpg" alt="Französische Croissants" />
+      </div>
 
-            <div class="meta-row">
-                <div class="meta-badge">⏱️ 90 Min.</div>
-                <div class="meta-badge">🧑‍🍳 Pfiffig</div>
-                <div class="meta-badge">📅 18.03.2026</div>
-            </div>
-        </section>
+      <div class="meta-row">
+        <div class="meta-badge">⏱️ 90 Min.</div>
+        <div class="meta-badge">🧑‍🍳 Pfiffig</div>
+        <div class="meta-badge">📅 18.03.2026</div>
+      </div>
+    </section>
 
-        <hr class="divider" />
+    <hr class="divider" />
 
-        <section class="ingredients-section">
-            <div class="portion-row">
-                <label for="portionInput">Zutaten für</label>
-                <input id="portionInput" type="number" min="1" max="40" value="4" />
-                <button id="calculateBtn" type="button">Portionen</button>
-            </div>
+    <section class="ingredients-section">
+      <div class="portion-row">
+        <label for="portionInput">Zutaten für</label>
+        <input id="portionInput" type="number" min="1" max="40" value="4" />
+        <button id="calculateBtn" type="button">Portionen</button>
+      </div>
 
-            <div class="ingredients-list">
-                <div class="ingredient-item">
-                    <span class="amount" data-base="330" data-unit="g">330</span>
-                    Mehl
-                </div>
-                <div class="ingredient-item">
-                    <span class="amount" data-base="150" data-unit="ml">150</span>
-                    Milch
-                </div>
-                <div class="ingredient-item">
-                    <span class="amount" data-base="25" data-unit="g">25</span>
-                    Margarine
-                </div>
-                <div class="ingredient-item">
-                    <span class="amount" data-base="10" data-unit="g">10</span>
-                    Zucker
-                </div>
-                <div class="ingredient-item">
-                    <span class="amount" data-base="1" data-unit="">1</span>
-                    Ei
-                </div>
-                <div class="ingredient-item">
-                    <span class="amount" data-base="1" data-unit="">1</span>
-                    Eigelb
-                </div>
-                <div class="ingredient-item">
-                    <span class="amount" data-base="20" data-unit="g">20</span>
-                    frische Hefe
-                </div>
-                <div class="ingredient-item">
-                    <span class="amount" data-base="4" data-unit="g">4</span>
-                    Salz
-                </div>
-                <div class="ingredient-item">
-                    <span class="amount" data-base="1" data-unit="TL">1</span>
-                    Zitronensaft
-                </div>
-                <div class="ingredient-item">
-                    <span class="amount" data-base="1" data-unit="Msp">1</span>
-                    Vanille
-                </div>
-                <div class="ingredient-item">
-                    <span class="amount" data-base="150" data-unit="g">150</span>
-                    Butter
-                </div>
-            </div>
-        </section>
-
-        <section class="preparation-section">
-            <h2>Zubereitung</h2>
-
-            <div class="meta-row small">
-                <div class="meta-badge">⏱️ ca. 90 Minuten</div>
-                <div class="meta-badge">🔥 Gesamtzeit ca. 120 Minuten</div>
-            </div>
-
-            <br>
-            <br>
-
-            <p class="preparation-text">
-                Milch erwärmen, Zucker und Hefe unter Rühren und darin auflösen.
-                Hefemilch, Mehl, Salz, Eigelb, Ei, Zitronenschale, Vanille und Margarine zu einem geschmeidigen Teig
-                verarbeiten. Dann abgedeckt über Nacht
-                im Kühlschrank gehen lassen.
-                Die Butter zwischen Klarsichtfolie ca. 30 x 15 cm ausrollen und kühlstellen.
-                Den Hefeteig auf der bemehlten Arbeitsfläche kreuzförmig einschneiden. So ausrollen, dass ein Kreuz
-                entsteht.<br><br>
-                Die Butterplatte in die Mitte legen. Die Teigkanten mit etwas Wasser bestreichen. Die
-                Teiglappen über die Butterplatte legen, sodass diese vollständig eingehüllt ist.
-                Den Teig rundherum leicht andrücken und 15 Minuten kalt stellen.<br>
-            </p>
-
-            <p class="preparation-text">
-                Milch erwärmen, Zucker und Hefe unter Rühren und darin auflösen. Hefemilch, Mehl, Salz, Eigelb,
-                Ei,
-                Zitronenschale, Vanille und Margarine zu einem geschmeidigen Teig verarbeiten. Dann abgedeckt über Nacht
-                im Kühlschrank gehen lassen.<br>
-                Die Butter zwischen Klarsichtfolie ca. 30 x 15 cm ausrollen und kühlstellen.
-                Den Hefeteig auf der bemehlten Arbeitsfläche kreuzförmig einschneiden. So ausrollen, dass ein Kreuz
-                entsteht.<br> Die Butterplatte in die Mitte legen. Die Teigkanten mit etwas Wasser bestreichen. Die
-                Teiglappen über die Butterplatte legen, sodass diese vollständig eingehüllt ist. <br> Den Teig
-                rundherum
-                leicht andrücken und 15 Minuten kalt stellen.<br>
-
-                Den Teigblock auf der bemehlten Arbeitsfläche auf etwa 50 x 30 cm ausrollen. Ein Teigdrittel zur Mitte
-                hin einschlagen, das andere Drittel darüberlegen. 20 Minuten kalt stellen.<br>
-                Ausrollen, Einschlagen und Kaltstellen einmal wiederholen (einfache Tour). Nun dem Teig noch eine
-                doppelte Tour geben, d.h. die rechte und die linke Teigkante bis zur Mitte hin einschlagen, sodass sie
-                in der Mitte aneinander stoßen. Nach dieser Tour sollte der Teig mindestens 30 Minuten im Kühlschrank
-                entspannen.<br>
-                Den Teig auf der bemehlten Arbeitsfläche auf ca. 60 x 20 cm ausrollen. Aus der Platte 8 gleichgroße
-                Dreiecke schneiden. An der Schmalseite in der Mitte jeweils 2 cm tief einschneiden, um die Hörnchen
-                besser biegen zu können.<br>
-                Die Dreiecke von der Schmalseite her zu Hörnchen aufrollen, dabei die Teigspitzen leicht andrücken. Auf
-                ein mit Backpapier belegtes Backblech setzen. Ca. 30 Minuten gehen lassen, nach 20 Minuten die
-                Croissants mit dem verquirlten Eigelb bestreichen.<br>
-                Im vorgeheizten Backofen auf der 2. Einschubleiste von unten bei 210 Grad 15-18 Minuten backen (Gas 3-4,
-                Umluft ca. 15 Minuten bei 190 Grad). Aus dem Ofen nehmen und leicht abkühlen lassen.
-            </p>
-        </section>
-
-        <section class="author-section">
-            <h3>Rezept erstellt von</h3>
-
-            <div class="author-box">
-                <div class="author-avatar">S</div>
-                <div class="author-name">Sandra</div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <a href="./index.html" class="footer-logo">
-                <img src="./img/png/logo.png" alt="Kochwelt Logo" class="footer-logo-img" />
-            </a>
-
-            <div class="social-links">
-                <a href="#" class="social-btn facebook" aria-label="Facebook">
-                    <span class="social-icon">f</span>
-                    <span class="social-text">
-                        <small>FIND US ON</small>
-                        <strong>FACEBOOK</strong>
-                    </span>
-                </a>
-
-                <a href="#" class="social-btn instagram" aria-label="Instagram">
-                    <span class="social-icon">◎</span>
-                    <span class="social-text">
-                        <small>FOLLOW US ON</small>
-                        <strong>INSTAGRAM</strong>
-                    </span>
-                </a>
-
-                <a href="#" class="social-btn twitter" aria-label="Twitter">
-                    <span class="social-icon">t</span>
-                    <span class="social-text">
-                        <small>FOLLOW US ON</small>
-                        <strong>TWITTER</strong>
-                    </span>
-                </a>
-            </div>
+      <div class="ingredients-list">
+        <div class="ingredient-item">
+          <span class="amount" data-base="330" data-unit="g">330</span>
+          Mehl
         </div>
-    </footer>
-</body>
+        <div class="ingredient-item">
+          <span class="amount" data-base="150" data-unit="ml">150</span>
+          Milch
+        </div>
+        <div class="ingredient-item">
+          <span class="amount" data-base="25" data-unit="g">25</span>
+          Margarine
+        </div>
+        <div class="ingredient-item">
+          <span class="amount" data-base="10" data-unit="g">10</span>
+          Zucker
+        </div>
+        <div class="ingredient-item">
+          <span class="amount" data-base="1" data-unit="">1</span>
+          Ei
+        </div>
+        <div class="ingredient-item">
+          <span class="amount" data-base="1" data-unit="">1</span>
+          Eigelb
+        </div>
+        <div class="ingredient-item">
+          <span class="amount" data-base="20" data-unit="g">20</span>
+          frische Hefe
+        </div>
+        <div class="ingredient-item">
+          <span class="amount" data-base="4" data-unit="g">4</span>
+          Salz
+        </div>
+        <div class="ingredient-item">
+          <span class="amount" data-base="1" data-unit="TL">1</span>
+          Zitronensaft
+        </div>
+        <div class="ingredient-item">
+          <span class="amount" data-base="1" data-unit="Msp">1</span>
+          Vanille
+        </div>
+        <div class="ingredient-item">
+          <span class="amount" data-base="150" data-unit="g">150</span>
+          Butter
+        </div>
+      </div>
+    </section>
 
+    <section class="preparation-section">
+      <h2>Zubereitung</h2>
+
+      <div class="meta-row small">
+        <div class="meta-badge">⏱️ ca. 90 Minuten</div>
+        <div class="meta-badge">🔥 Gesamtzeit ca. 120 Minuten</div>
+      </div>
+
+      <p class="preparation-text">
+        Milch erwärmen, Zucker und Hefe unter Rühren darin auflösen. Hefemilch,
+        Mehl, Salz, Eigelb, Ei, Zitronenschale, Vanille und Margarine zu einem
+        geschmeidigen Teig verarbeiten. Dann abgedeckt über Nacht im Kühlschrank
+        gehen lassen.
+      </p>
+
+      <p class="preparation-text">
+        Die Butter zwischen Klarsichtfolie ca. 30 x 15 cm ausrollen und
+        kühlstellen. Den Hefeteig auf der bemehlten Arbeitsfläche kreuzförmig
+        einschneiden und so ausrollen, dass ein Kreuz entsteht. Die Butterplatte
+        in die Mitte legen. Die Teigkanten mit etwas Wasser bestreichen. Die
+        Teiglappen über die Butterplatte legen, sodass diese vollständig
+        eingehüllt ist. Den Teig rundherum leicht andrücken und 15 Minuten kalt
+        stellen.
+      </p>
+
+      <p class="preparation-text">
+        Den Teigblock auf der bemehlten Arbeitsfläche auf etwa 50 x 30 cm
+        ausrollen. Ein Teigdrittel zur Mitte hin einschlagen, das andere Drittel
+        darüberlegen und 20 Minuten kalt stellen. Diesen Vorgang einmal
+        wiederholen. Danach eine doppelte Tour geben und den Teig mindestens
+        30 Minuten im Kühlschrank ruhen lassen.
+      </p>
+
+      <p class="preparation-text">
+        Den Teig auf ca. 60 x 20 cm ausrollen und in 8 gleich große Dreiecke
+        schneiden. An der Schmalseite jeweils leicht einschneiden, die Dreiecke
+        zu Hörnchen aufrollen und auf ein mit Backpapier belegtes Blech setzen.
+        Ca. 30 Minuten gehen lassen, nach 20 Minuten mit verquirltem Eigelb
+        bestreichen und im vorgeheizten Ofen bei 210 Grad 15–18 Minuten backen.
+      </p>
+    </section>
+
+    <section class="author-section">
+      <h3>Rezept erstellt von</h3>
+
+      <div class="author-box">
+        <div class="author-avatar">S</div>
+        <div class="author-name">Sandra</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a href="./index.html" class="footer-logo">
+        <img
+          src="./img/png/logo.png"
+          alt="Kochwelt Logo"
+          class="footer-logo-img"
+        />
+      </a>
+
+      <div class="social-links">
+        <a href="#" class="social-btn facebook" aria-label="Facebook">
+          <span class="social-icon">f</span>
+          <span class="social-text">
+            <small>FIND US ON</small>
+            <strong>FACEBOOK</strong>
+          </span>
+        </a>
+
+        <a href="#" class="social-btn instagram" aria-label="Instagram">
+          <span class="social-icon">◎</span>
+          <span class="social-text">
+            <small>FOLLOW US ON</small>
+            <strong>INSTAGRAM</strong>
+          </span>
+        </a>
+
+        <a href="#" class="social-btn twitter" aria-label="Twitter">
+          <span class="social-icon">t</span>
+          <span class="social-text">
+            <small>FOLLOW US ON</small>
+            <strong>TWITTER</strong>
+          </span>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>

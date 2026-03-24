@@ -10,39 +10,45 @@
 </head>
 <body>
   <header class="site-header">
-  <div class="container header-inner">
-    <a href="./index.html" class="logo">
-      <img src="./img/png/logo.png" alt="Kochwelt Logo" class="logo-img" />
-    </a>
+    <div class="container header-inner">
+      <a href="./index.html" class="logo">
+        <img src="./img/png/logo.png" alt="Kochwelt Logo" class="logo-img" />
+      </a>
 
-    <button
-      class="burger-btn"
-      id="burgerBtn"
-      type="button"
-      aria-label="Menü öffnen"
-      aria-controls="mainNav"
-      aria-expanded="false"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+      <button
+        class="burger-btn"
+        id="burgerBtn"
+        type="button"
+        aria-label="Menü öffnen"
+        aria-controls="mainNav"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <nav class="main-nav" id="mainNav">
-      <a href="./index.html">Start</a>
-      <a href="./croissants.html" class="active">Rezept des Tages</a>
-      <a href="./kontakt.html">Kontakt</a>
-      <a href="./impressum.html">Impressum</a>
-    </nav>
-  </div>
-</header>
+      <nav class="main-nav" id="mainNav">
+        <a href="./index.html">Start</a>
+        <a href="./croissants.html">Rezept des Tages</a>
+        <a href="./kontakt.html" class="active">Kontakt</a>
+        <a href="./impressum.html">Impressum</a>
+      </nav>
+    </div>
+  </header>
 
   <main class="contact-main">
     <section class="contact-section">
       <div class="contact-card" id="contactCard">
         <h1>Kontaktiere uns</h1>
 
-        <form id="contactForm" class="contact-form" novalidate>
+        <form
+          id="contactForm"
+          class="contact-form"
+          action="https://formspree.io/f/xojpaqqy"
+          method="POST"
+          novalidate
+        >
           <div class="form-group">
             <label for="name">Dein Name:</label>
             <input type="text" id="name" name="name" required />
@@ -61,6 +67,8 @@
             <p class="error-message" id="messageError"></p>
           </div>
 
+          <input type="hidden" name="_subject" value="Neue Nachricht von Kochwelt" />
+
           <div class="submit-wrap">
             <button type="submit" class="submit-btn">Abschicken</button>
           </div>
@@ -68,23 +76,6 @@
       </div>
     </section>
   </main>
-
-  <!-- modify this form HTML and place wherever you want your form -->
-<form
-  action="https://formspree.io/f/xojpaqqy"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
 
   <div class="success-modal hidden" id="successModal">
     <div class="success-box">
@@ -94,40 +85,39 @@
       <button type="button" id="closeSuccessModal" class="success-btn-modal">OK</button>
     </div>
   </div>
-</body>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <a href="./index.html" class="footer-logo">
-      <img src="./img/png/logo.png" alt="Kochwelt Logo" class="footer-logo-img" />
-    </a>
-
-    <div class="social-links">
-      <a href="#" class="social-btn facebook" aria-label="Facebook">
-        <span class="social-icon">f</span>
-        <span class="social-text">
-          <small>FIND US ON</small>
-          <strong>FACEBOOK</strong>
-        </span>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a href="./index.html" class="footer-logo">
+        <img src="./img/png/logo.png" alt="Kochwelt Logo" class="footer-logo-img" />
       </a>
 
-      <a href="#" class="social-btn instagram" aria-label="Instagram">
-        <span class="social-icon">◎</span>
-        <span class="social-text">
-          <small>FOLLOW US ON</small>
-          <strong>INSTAGRAM</strong>
-        </span>
-      </a>
+      <div class="social-links">
+        <a href="#" class="social-btn facebook" aria-label="Facebook">
+          <span class="social-icon">f</span>
+          <span class="social-text">
+            <small>FIND US ON</small>
+            <strong>FACEBOOK</strong>
+          </span>
+        </a>
 
-      <a href="#" class="social-btn twitter" aria-label="Twitter">
-        <span class="social-icon">t</span>
-        <span class="social-text">
-          <small>FOLLOW US ON</small>
-          <strong>TWITTER</strong>
-        </span>
-      </a>
+        <a href="#" class="social-btn instagram" aria-label="Instagram">
+          <span class="social-icon">◎</span>
+          <span class="social-text">
+            <small>FOLLOW US ON</small>
+            <strong>INSTAGRAM</strong>
+          </span>
+        </a>
+
+        <a href="#" class="social-btn twitter" aria-label="Twitter">
+          <span class="social-icon">t</span>
+          <span class="social-text">
+            <small>FOLLOW US ON</small>
+            <strong>TWITTER</strong>
+          </span>
+        </a>
+      </div>
     </div>
-  </div>
-</footer>
-
+  </footer>
+</body>
 </html>
