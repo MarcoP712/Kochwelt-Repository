@@ -13,14 +13,19 @@ document.addEventListener("DOMContentLoaded", () => {
     if (Number.isInteger(value)) {
       return value.toString();
     }
-    return value.toFixed(2).replace(",", ".").replace(/\.00$/, "");
+    return value.toFixed(2).replace(/\.00$/, "").replace(".", ",");
   }
 
   function updateIngredients() {
     let portions = parseInt(portionInput.value, 10);
 
-    if (isNaN(portions) || portions < 1) portions = 1;
-    if (portions > 40) portions = 40;
+    if (isNaN(portions) || portions < 1) {
+      portions = 1;
+    }
+
+    if (portions > 40) {
+      portions = 40;
+    }
 
     portionInput.value = portions;
 
@@ -28,12 +33,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const base = parseFloat(el.dataset.base);
       const unit = el.dataset.unit || "";
 
-      if (isNaN(base)) return;
+      if (isNaN(base)) {
+        return;
+      }
 
       const result = (base / basePortions) * portions;
       el.textContent = unit
-        ? `${formatNumber(result)} ${unit}`
-        : formatNumber(result);
+        ? `${formatNumber(result)}`
+        : `${formatNumber(result)}`;
     });
   }
 
