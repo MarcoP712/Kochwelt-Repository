@@ -453,3 +453,11 @@ main {
     max-width: 300px;
   }
 }
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  color: #222;
+  background: #ffffff;
+}
