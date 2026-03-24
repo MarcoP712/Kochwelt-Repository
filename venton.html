@@ -1,177 +1,133 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Griechischer Bauernsalat</title>
-    <link rel="stylesheet" href="./fonts.css" />  
-    <link rel="stylesheet" href="./venton.css" />
-    <script defer src="./venton.js"></script>
-    <link rel="icon" type="image/png" href="./img/png/logo_small.png" />
-    <script defer src="./nav.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Griechischer Bauernsalat</title>
+  <link rel="stylesheet" href="./fonts.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./venton.css" />
+  <script defer src="./venton.js"></script>
+  <script defer src="./nav.js"></script>
+  <link rel="icon" type="image/png" href="./img/png/logo_small.png" />
+</head>
 
-  <body>
-    <header class="site-header">
-  <div class="container header-inner">
-    <a href="./index.html" class="logo">
-      <img src="./img/png/logo.png" alt="Kochwelt Logo" class="logo-img" />
-    </a>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html" class="logo">
+        <img src="./img/png/logo.png" alt="Kochwelt Logo" class="logo-img" />
+      </a>
 
-    <button
-      class="burger-btn"
-      id="burgerBtn"
-      type="button"
-      aria-label="Menü öffnen"
-      aria-controls="mainNav"
-      aria-expanded="false"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+      <button
+        class="burger-btn"
+        id="burgerBtn"
+        type="button"
+        aria-label="Menü öffnen"
+        aria-controls="mainNav"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <nav class="main-nav" id="mainNav">
-      <a href="./index.html">Start</a>
-      <a href="./croissants.html" class="active">Rezept des Tages</a>
-      <a href="./kontakt.html">Kontakt</a>
-      <a href="./impressum.html">Impressum</a>
-    </nav>
-  </div>
-</header>
+      <nav class="main-nav" id="mainNav">
+        <a href="./index.html">Start</a>
+        <a href="./croissants.html" class="active">Rezept des Tages</a>
+        <a href="./kontakt.html">Kontakt</a>
+        <a href="./impressum.html">Impressum</a>
+      </nav>
+    </div>
+  </header>
 
-    <main class="container recipe-page">
-      <section class="recipe-hero">
-        <h1>Griechischer Bauernsalat</h1>
+  <main class="container recipe-page">
+    <section class="recipe-hero">
+      <h1>Griechischer Bauernsalat</h1>
 
-        <div class="hero-image">
-          <img src="./img/jpg/salad.jpg" alt="Griechischer Bauernsalat" />
-        </div>
-
-        <div class="meta-row">
-          <div class="meta-badge">⏱️ 15 Min.</div>
-          <div class="meta-badge">🧑‍🍳 einfach</div>
-          <div class="meta-badge">📅 18.03.2026</div>
-        </div>
-      </section>
-
-      <hr class="divider" />
-
-      <section class="ingredients-section">
-        <div class="portion-row">
-          <label for="portionInput">Zutaten für</label>
-          <input id="portionInput" type="number" min="1" max="40" value="4" />
-          <button id="calculateBtn" type="button">Portionen</button>
-        </div>
-
-        <div class="ingredients-list">
-          <div class="ingredient-item">
-            <span class="amount" data-base="4" data-unit="">4</span>
-            Tomaten
-          </div>
-          <div class="ingredient-item">
-            <span class="amount" data-base="1" data-unit="">1</span>
-            Gurke
-          </div>
-          <div class="ingredient-item">
-            <span class="amount" data-base="1" data-unit="">1</span>
-            rote Zwiebel
-          </div>
-          <div class="ingredient-item">
-            <span class="amount" data-base="200" data-unit="g">200</span>
-            Feta
-          </div>
-          <div class="ingredient-item">
-            <span class="amount" data-base="12" data-unit="">12</span>
-            Oliven
-          </div>
-          <div class="ingredient-item">
-            <span class="amount" data-base="3" data-unit="EL">3</span>
-            Olivenöl
-          </div>
-          <div class="ingredient-item">
-            <span class="amount" data-base="1" data-unit="EL">1</span>
-            Zitronensaft
-          </div>
-          <div class="ingredient-item">
-            <span class="amount" data-base="1" data-unit="TL">1</span>
-            Oregano
-          </div>
-          <div class="ingredient-item">
-            <span class="amount" data-base="1" data-unit="Prise">1</span>
-            Salz
-          </div>
-          <div class="ingredient-item">
-            <span class="amount" data-base="1" data-unit="Prise">1</span>
-            Pfeffer
-          </div>
-        </div>
-      </section>
-
-      <section class="preparation-section">
-        <h2>Zubereitung</h2>
-
-        <div class="meta-row small">
-          <div class="meta-badge">⏱️ ca. 15 Minuten</div>
-          <div class="meta-badge">🔥 Gesamtzeit ca. 15 Minuten</div>
-        </div>
-
-        <p class="preparation-text">
-          Die Tomaten waschen und in Stücke schneiden. Die Gurke in Scheiben
-          schneiden und die rote Zwiebel in feine Ringe schneiden. Den Feta
-          würfeln und zusammen mit den Oliven in eine große Schüssel geben.
-          Anschließend Olivenöl, Zitronensaft, Oregano, Salz und Pfeffer
-          hinzufügen und alles gut vermengen. Den Salat kurz ziehen lassen und
-          frisch servieren.
-        </p>
-      </section>
-
-      <section class="author-section">
-        <h3>Rezept erstellt von</h3>
-
-        <div class="author-box">
-          <div class="author-avatar">V</div>
-          <div class="author-name">Veton</div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <a href="./index.html" class="footer-logo">
-          <img
-            src="./img/png/logo.png"
-            alt="Kochwelt Logo"
-            class="footer-logo-img"
-          />
-        </a>
-
-        <div class="social-links">
-          <a href="#" class="social-btn facebook" aria-label="Facebook">
-            <span class="social-icon">f</span>
-            <span class="social-text">
-              <small>FIND US ON</small>
-              <strong>FACEBOOK</strong>
-            </span>
-          </a>
-
-          <a href="#" class="social-btn instagram" aria-label="Instagram">
-            <span class="social-icon">◎</span>
-            <span class="social-text">
-              <small>FOLLOW US ON</small>
-              <strong>INSTAGRAM</strong>
-            </span>
-          </a>
-
-          <a href="#" class="social-btn twitter" aria-label="Twitter">
-            <span class="social-icon">t</span>
-            <span class="social-text">
-              <small>FOLLOW US ON</small>
-              <strong>TWITTER</strong>
-            </span>
-          </a>
-        </div>
+      <div class="hero-image">
+        <img src="./img/jpg/salad.jpg" alt="Griechischer Bauernsalat" />
       </div>
-    </footer>
-  </body>
+
+      <div class="meta-row">
+        <div class="meta-badge">⏱️ 15 Min.</div>
+        <div class="meta-badge">🧑‍🍳 einfach</div>
+        <div class="meta-badge">📅 18.03.2026</div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <section class="ingredients-section">
+      <div class="portion-row">
+        <label for="portionInput">Zutaten für</label>
+        <input id="portionInput" type="number" min="1" max="40" value="4" />
+        <button id="calculateBtn" type="button">Portionen</button>
+      </div>
+
+      <div class="ingredients-list">
+        <div class="ingredient-item"><span class="amount" data-base="4" data-unit="">4</span> Tomaten</div>
+        <div class="ingredient-item"><span class="amount" data-base="1" data-unit="">1</span> Gurke</div>
+        <div class="ingredient-item"><span class="amount" data-base="1" data-unit="">1</span> rote Zwiebel</div>
+        <div class="ingredient-item"><span class="amount" data-base="200" data-unit="g">200</span> Feta</div>
+        <div class="ingredient-item"><span class="amount" data-base="12" data-unit="">12</span> Oliven</div>
+        <div class="ingredient-item"><span class="amount" data-base="3" data-unit="EL">3</span> Olivenöl</div>
+        <div class="ingredient-item"><span class="amount" data-base="1" data-unit="EL">1</span> Zitronensaft</div>
+        <div class="ingredient-item"><span class="amount" data-base="1" data-unit="TL">1</span> Oregano</div>
+        <div class="ingredient-item"><span class="amount" data-base="1" data-unit="Prise">1</span> Salz</div>
+        <div class="ingredient-item"><span class="amount" data-base="1" data-unit="Prise">1</span> Pfeffer</div>
+      </div>
+    </section>
+
+    <section class="preparation-section">
+      <h2>Zubereitung</h2>
+
+      <div class="meta-row small">
+        <div class="meta-badge">⏱️ ca. 15 Minuten</div>
+        <div class="meta-badge">🔥 Gesamtzeit ca. 15 Minuten</div>
+      </div>
+
+      <p class="preparation-text">
+        Die Tomaten waschen und in Stücke schneiden. Die Gurke in Scheiben
+        schneiden und die rote Zwiebel in feine Ringe schneiden. Den Feta
+        würfeln und zusammen mit den Oliven in eine große Schüssel geben.
+        Anschließend Olivenöl, Zitronensaft, Oregano, Salz und Pfeffer
+        hinzufügen und alles gut vermengen. Den Salat kurz ziehen lassen und
+        frisch servieren.
+      </p>
+    </section>
+
+    <section class="author-section">
+      <h3>Rezept erstellt von</h3>
+
+      <div class="author-box">
+        <div class="author-avatar">V</div>
+        <div class="author-name">Veton</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a href="./index.html" class="footer-logo">
+        <img src="./img/png/logo.png" alt="Kochwelt Logo" class="footer-logo-img" />
+      </a>
+
+      <div class="social-links">
+        <a href="#" class="social-btn facebook" aria-label="Facebook">
+          <span class="social-icon">f</span>
+          <span class="social-text"><small>FIND US ON</small><strong>FACEBOOK</strong></span>
+        </a>
+        <a href="#" class="social-btn instagram" aria-label="Instagram">
+          <span class="social-icon">◎</span>
+          <span class="social-text"><small>FOLLOW US ON</small><strong>INSTAGRAM</strong></span>
+        </a>
+        <a href="#" class="social-btn twitter" aria-label="Twitter">
+          <span class="social-icon">t</span>
+          <span class="social-text"><small>FOLLOW US ON</small><strong>TWITTER</strong></span>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>

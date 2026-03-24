@@ -5,48 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kochwelt</title>
   <link rel="stylesheet" href="./fonts.css" />
+  <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="./marco.css" />
   <script defer src="./script.js"></script>
   <script defer src="./nav.js"></script>
 </head>
 <body>
   <header class="site-header">
-  <div class="container header-inner">
-    <a href="./index.html" class="logo">
-      <img src="./img/png/logo.png" alt="Kochwelt Logo" class="logo-img" />
-    </a>
+    <div class="container header-inner">
+      <a href="./index.html" class="logo">
+        <img src="./img/png/logo.png" alt="Kochwelt Logo" class="logo-img" />
+      </a>
 
-    <button
-      class="burger-btn"
-      id="burgerBtn"
-      type="button"
-      aria-label="Menü öffnen"
-      aria-controls="mainNav"
-      aria-expanded="false"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+      <button
+        class="burger-btn"
+        id="burgerBtn"
+        type="button"
+        aria-label="Menü öffnen"
+        aria-controls="mainNav"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <nav class="main-nav" id="mainNav">
-      <a href="./index.html">Start</a>
-      <a href="./croissants.html" class="active">Rezept des Tages</a>
-      <a href="./kontakt.html">Kontakt</a>
-      <a href="./impressum.html">Impressum</a>
-    </nav>
-  </div>
-</header>
+      <nav class="main-nav" id="mainNav">
+        <a href="./index.html">Start</a>
+        <a href="./croissants.html" class="active">Rezept des Tages</a>
+        <a href="./kontakt.html">Kontakt</a>
+        <a href="./impressum.html">Impressum</a>
+      </nav>
+    </div>
+  </header>
 
   <main class="container recipe-page">
     <section class="recipe-hero">
       <h1>Verschleierter Braten</h1>
 
       <div class="hero-image">
-        <img
-          src="./img/jpg/verschleierter_braten_mockup.jpg"
-          alt="Verschleierter Braten"
-        />
+        <img src="./img/jpg/verschleierter_braten_mockup.jpg" alt="Verschleierter Braten" />
       </div>
 
       <div class="meta-row">
@@ -66,54 +64,18 @@
       </div>
 
       <div class="ingredients-list">
-        <div class="ingredient-item">
-          <span class="amount" data-base="800" data-unit="g">800</span>
-          gemischtes Faschiertes
-        </div>
-        <div class="ingredient-item">
-          <span class="amount" data-base="2" data-unit="">2</span>
-          Zwiebeln
-        </div>
-        <div class="ingredient-item">
-          <span class="amount" data-base="2" data-unit="">2</span>
-          Knoblauchzehen
-        </div>
-        <div class="ingredient-item">
-          <span class="amount" data-base="2" data-unit="">2</span>
-          Eier
-        </div>
-        <div class="ingredient-item">
-          <span class="amount" data-base="80" data-unit="g">80</span>
-          Semmelbrösel
-        </div>
-        <div class="ingredient-item">
-          <span class="amount" data-base="2" data-unit="EL">2</span>
-          Senf
-        </div>
-        <div class="ingredient-item">
-          <span class="amount" data-base="150" data-unit="g">150</span>
-          Schinken
-        </div>
-        <div class="ingredient-item">
-          <span class="amount" data-base="200" data-unit="g">200</span>
-          Käse in Scheiben
-        </div>
-        <div class="ingredient-item">
-          <span class="amount" data-base="1" data-unit="TL">1</span>
-          Salz
-        </div>
-        <div class="ingredient-item">
-          <span class="amount" data-base="0.5" data-unit="TL">0.5</span>
-          Pfeffer
-        </div>
-        <div class="ingredient-item">
-          <span class="amount" data-base="1" data-unit="TL">1</span>
-          Paprikapulver
-        </div>
-        <div class="ingredient-item">
-          <span class="amount" data-base="2" data-unit="EL">2</span>
-          Öl
-        </div>
+        <div class="ingredient-item"><span class="amount" data-base="800" data-unit="g">800</span> gemischtes Faschiertes</div>
+        <div class="ingredient-item"><span class="amount" data-base="2" data-unit="">2</span> Zwiebeln</div>
+        <div class="ingredient-item"><span class="amount" data-base="2" data-unit="">2</span> Knoblauchzehen</div>
+        <div class="ingredient-item"><span class="amount" data-base="2" data-unit="">2</span> Eier</div>
+        <div class="ingredient-item"><span class="amount" data-base="80" data-unit="g">80</span> Semmelbrösel</div>
+        <div class="ingredient-item"><span class="amount" data-base="2" data-unit="EL">2</span> Senf</div>
+        <div class="ingredient-item"><span class="amount" data-base="150" data-unit="g">150</span> Schinken</div>
+        <div class="ingredient-item"><span class="amount" data-base="200" data-unit="g">200</span> Käse in Scheiben</div>
+        <div class="ingredient-item"><span class="amount" data-base="1" data-unit="TL">1</span> Salz</div>
+        <div class="ingredient-item"><span class="amount" data-base="0.5" data-unit="TL">0.5</span> Pfeffer</div>
+        <div class="ingredient-item"><span class="amount" data-base="1" data-unit="TL">1</span> Paprikapulver</div>
+        <div class="ingredient-item"><span class="amount" data-base="2" data-unit="EL">2</span> Öl</div>
       </div>
     </section>
 
@@ -151,36 +113,21 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <a href="./index.html" class="footer-logo">
-        <img
-          src="./img/png/logo.png"
-          alt="Kochwelt Logo"
-          class="footer-logo-img"
-        />
+        <img src="./img/png/logo.png" alt="Kochwelt Logo" class="footer-logo-img" />
       </a>
 
       <div class="social-links">
         <a href="#" class="social-btn facebook" aria-label="Facebook">
           <span class="social-icon">f</span>
-          <span class="social-text">
-            <small>FIND US ON</small>
-            <strong>FACEBOOK</strong>
-          </span>
+          <span class="social-text"><small>FIND US ON</small><strong>FACEBOOK</strong></span>
         </a>
-
         <a href="#" class="social-btn instagram" aria-label="Instagram">
           <span class="social-icon">◎</span>
-          <span class="social-text">
-            <small>FOLLOW US ON</small>
-            <strong>INSTAGRAM</strong>
-          </span>
+          <span class="social-text"><small>FOLLOW US ON</small><strong>INSTAGRAM</strong></span>
         </a>
-
         <a href="#" class="social-btn twitter" aria-label="Twitter">
           <span class="social-icon">t</span>
-          <span class="social-text">
-            <small>FOLLOW US ON</small>
-            <strong>TWITTER</strong>
-          </span>
+          <span class="social-text"><small>FOLLOW US ON</small><strong>TWITTER</strong></span>
         </a>
       </div>
     </div>
