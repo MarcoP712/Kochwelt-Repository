@@ -1,39 +1,44 @@
-const defaultPortions = 4;
-const portionInput = document.getElementById("portionInput");
-const calculateBtn = document.getElementById("calculateBtn");
-const amountElements = document.querySelectorAll(".amount");
+document.addEventListener("DOMContentLoaded", () => {
+  const portionInput = document.getElementById("portionInput");
+  const calculateBtn = document.getElementById("calculateBtn");
+  const amountElements = document.querySelectorAll(".amount");
 
-function formatNumber(value) {
-  if (Number.isInteger(value)) {
-    return value.toString();
+  if (!portionInput || !calculateBtn || amountElements.length === 0) {
+    return;
   }
 
-  return value.toFixed(2).replace(".", ",").replace(/,00$/, "");
-}
+  const basePortions = 4;
 
-function updateIngredients() {
-  let portions = parseInt(portionInput.value, 10);
-
-  if (isNaN(portions) || portions < 1) {
-    portions = 1;
-    portionInput.value = 1;
+  function formatNumber(value) {
+    if (Number.isInteger(value)) {
+      return value.toString();
+    }
+    return value.toFixed(2).replace(",", ".").replace(/\.00$/, "");
   }
 
-  amountElements.forEach((element) => {
-    const baseAmount = parseFloat(element.dataset.base);
-    const unit = element.dataset.unit || "";
-    const newAmount = (baseAmount / defaultPortions) * portions;
+  function updateIngredients() {
+    let portions = parseInt(portionInput.value, 10);
 
-    element.textContent = `${formatNumber(newAmount)}${unit ? " " + unit : ""}`;
-  });
-}
+    if (isNaN(portions) || portions < 1) portions = 1;
+    if (portions > 40) portions = 40;
 
-calculateBtn.addEventListener("click", updateIngredients);
+    portionInput.value = portions;
 
-portionInput.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") {
-    updateIngredients();
+    amountElements.forEach((el) => {
+      const base = parseFloat(el.dataset.base);
+      const unit = el.dataset.unit || "";
+
+      if (isNaN(base)) return;
+
+      const result = (base / basePortions) * portions;
+      el.textContent = unit
+        ? `${formatNumber(result)} ${unit}`
+        : formatNumber(result);
+    });
   }
+
+  calculateBtn.addEventListener("click", updateIngredients);
+  portionInput.addEventListener("input", updateIngredients);
+
+  updateIngredients();
 });
-
-updateIngredients();
