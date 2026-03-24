@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" href="./img/png/logo_small.png" />
+    <script defer src="./nav.js"></script>
     <title>Kochwelt</title>
   </head>
 
@@ -21,7 +22,20 @@
           <img src="./img/png/logo.png" alt="Kochwelt Logo" class="logo-img" />
         </a>
 
-        <nav class="main-nav">
+        <button
+          class="burger-btn"
+          id="burgerBtn"
+          type="button"
+          aria-label="Menü öffnen"
+          aria-controls="mainNav"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" id="mainNav">
           <a href="./index.html" class="active">Start</a>
           <a href="./croissants.html">Rezept des Tages</a>
           <a href="./kontakt.html">Kontakt</a>
@@ -77,10 +91,9 @@
           </div>
         </div>
       </section>
+
       <section class="toaster-section">
         <h3>Was kam zuerst ? Toaster oder Toastbrot ?</h3>
-        <br />
-        <br />
 
         <div class="toaster-section-second">
           <p>

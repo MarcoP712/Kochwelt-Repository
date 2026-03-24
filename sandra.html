@@ -7,25 +7,37 @@
     <title>Kochwelt</title>
     <link rel="stylesheet" href="./sandra.css" />
     <script defer src="./sandra.js"></script>
+    <script defer src="./nav.js"></script>
 </head>
 
 <body>
     <header class="site-header">
-        <div class="container header-inner">
-            <div class="logo">
-                <img src="./img/png/logo.png" alt="Kochwelt Logo" class="logo-img" />
-            </div>
+  <div class="container header-inner">
+    <a href="./index.html" class="logo">
+      <img src="./img/png/logo.png" alt="Kochwelt Logo" class="logo-img" />
+    </a>
 
-            <a href="./index.html" class="logo"></a>
+    <button
+      class="burger-btn"
+      id="burgerBtn"
+      type="button"
+      aria-label="Menü öffnen"
+      aria-controls="mainNav"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-            <nav class="main-nav">
-                <a href="./index.html">Start</a>
-                <a href="./croissants.html" class="active">Rezept des Tages</a>
-                <a href="./kontakt.html">Kontakt</a>
-                <a href="./impressum.html">Impressum</a>
-            </nav>
-        </div>
-    </header>
+    <nav class="main-nav" id="mainNav">
+      <a href="./index.html">Start</a>
+      <a href="./croissants.html" class="active">Rezept des Tages</a>
+      <a href="./kontakt.html">Kontakt</a>
+      <a href="./impressum.html">Impressum</a>
+    </nav>
+  </div>
+</header>
 
     <main class="container recipe-page">
         <section class="recipe-hero">
