@@ -19,6 +19,7 @@
 .first-section h1 {
   margin-top: 0;
   margin-bottom: 18px;
+  white-space: nowrap;
 }
 
 .first-section p {
@@ -48,6 +49,12 @@
   background-color: rgb(234, 231, 231);
 }
 
+.second-section-container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
 .second-section h2 {
   display: flex;
   justify-content: center;
@@ -55,6 +62,7 @@
   font-weight: 700;
   padding-top: 60px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .recipes {
@@ -98,6 +106,7 @@
   padding-top: 70px;
   padding-bottom: 50px;
   text-align: center;
+  white-space: nowrap;
 }
 
 .toaster-section-second {
